@@ -78,6 +78,12 @@
     <Compile Include="AddNewCourse.Designer.cs">
       <DependentUpon>AddNewCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChooseCopyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseCopyForm.Designer.cs">
+      <DependentUpon>ChooseCopyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ColorPicker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddNewCourse.resx">
       <DependentUpon>AddNewCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseCopyForm.resx">
+      <DependentUpon>ChooseCopyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ColorPicker.resx">
       <DependentUpon>ColorPicker.cs</DependentUpon>

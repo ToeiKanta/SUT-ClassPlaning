@@ -248,7 +248,7 @@ namespace CourseManagement
 
                     //
                     Console.WriteLine("Name = " + name);
-                    Console.WriteLine("Row = " + col);
+                    Console.WriteLine("Row = " + row);
                     string[] str2 = item.Groups["Time"].Value.Split('-');
                     bool firstTime = true;
                     foreach (string str in str2)
@@ -276,6 +276,7 @@ namespace CourseManagement
                     }
                     Console.WriteLine("Colspan = " + colSpan);
                     Console.WriteLine("===============");
+                    //createTableLabel("Test", 0, 0, 1, courseColor);
                     if ( ! createTableLabel(name, col, row, colSpan, courseColor))
                     {
                         //MessageBox.Show("Failed : createTableLabel");
@@ -320,6 +321,7 @@ namespace CourseManagement
         {
             try
             {
+                row = row + 1;
                 Label myLabel = new Label();
                 myLabel.Name = "TableLabel" + count++;
                 myLabel.Parent = tableCourse;
@@ -347,29 +349,31 @@ namespace CourseManagement
 
                     switch (row)
                     {
-                        case 0:
+                        case 1:
                             txtRow = "จันทร์";
                             break;
-                        case 1:
+                        case 2:
                             txtRow = "อังคาร";
                             break;
-                        case 2:
+                        case 3:
                             txtRow = "พุธ";
                             break;
-                        case 3:
+                        case 4:
                             txtRow = "พฤหัส";
                             break;
-                        case 4:
+                        case 5:
                             txtRow = "ศุกร์";
                             break;
-                        case 5:
+                        case 6:
                             txtRow = "เสาร์";
                             break;
-                        case 6:
+                        case 7:
                             txtRow = "อาทิตย์";
                             break;
                     }
                     MessageBox.Show("เวลาตรงกันกับ \n" + tableCourse.GetControlFromPosition(col, row).Text + "\nวัน" + txtRow + " เวลา " + (col+8)  + ".00 น.\nไม่สามารถเพิ่มรายวิชานี้ได้", "เวชาซ้ำซ้อน", MessageBoxButtons.OK);
+                    this.clearTable();
+                    this.updateTable();
                     return false;
                 }
                 else
@@ -391,7 +395,6 @@ namespace CourseManagement
                     TempPos.Column = col;
                     TempPos.Row = row;
                     tableCourse.SetCellPosition(myLabel, TempPos);
-
                     //label.Location = new System.Drawing.Point(317, 119 + customLabels.Count * 26);
                     // label.Parent = tabPage2;
                     // label.Name = "label" + ValutaCustomScelta;
@@ -405,6 +408,8 @@ namespace CourseManagement
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
+                this.clearTable();
+                this.updateTable();
                 return false;
             }
         }
@@ -560,6 +565,106 @@ namespace CourseManagement
 
         }
 
-        
+        private void tableCourse_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void copyButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //ตรวจสอบว่าตารางว่างหรือเปล่า ถึงจะทำการคัดลอกได้
+                //คัดลอกฐานข้อมูล
+                string con = @"Data Source=.\Database.db";
+                int countData = 0;
+                using (SQLiteConnection conn = new SQLiteConnection(con))
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Course Where TableState=" + this.tableState; // เลือกตารางที่จำคัดลอก
+                    using (SQLiteCommand cmdRead = new SQLiteCommand(sql, conn))
+                    {
+                        using (SQLiteDataReader reader = cmdRead.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                countData++;
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+
+                if(countData != 0)
+                {
+                    MessageBox.Show("ตารางเรียนที่ท่านจะทำการคัดลอกได้ ต้องว่างเปล่าก่อน \nกรุณาลบรายวิชาในตารางเรียนนี้ทั้งหมดก่อน \n( ลบข้อมูลตารางเรียน " + this.tableState + " ) ");
+                    return;
+                }
+
+                //เลือกตารางที่จะคัดลอก
+                int targetTableID = 0;
+                using (var chooseCopyForm = new ChooseCopyForm(this.tableState))
+                {
+                    var result = chooseCopyForm.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        var targetTable = chooseCopyForm.ReturnValue1;
+                        targetTableID = targetTable;
+                    }
+                }
+
+                if(targetTableID != 0)
+                {
+                    //คัดลอกฐานข้อมูล
+                    string connectionString = @"Data Source=.\Database.db";
+                    using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                    {
+                        conn.Open();
+                        string sql = "SELECT * FROM Course Where TableState=" + targetTableID; // เลือกตารางที่จำคัดลอก
+                        using (SQLiteCommand cmdRead = new SQLiteCommand(sql, conn))
+                        {
+                            using (SQLiteDataReader reader = cmdRead.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    using (SQLiteCommand cmdInsert = new SQLiteCommand(conn))
+                                    {
+                                        cmdInsert.CommandText = "insert into Course (NameID, Name, Credit ,Date,TableState,Color) values (@nameID,@name,@credit,@date,@tableState,@Color)";
+                                        cmdInsert.Prepare();
+                                        cmdInsert.Parameters.AddWithValue("@nameID", reader["NameID"]);
+                                        cmdInsert.Parameters.AddWithValue("@name", reader["Name"]);
+                                        cmdInsert.Parameters.AddWithValue("@credit", reader["Credit"]);
+                                        cmdInsert.Parameters.AddWithValue("@date", reader["Date"]);
+                                        cmdInsert.Parameters.AddWithValue("@tableState", this.tableState);
+                                        cmdInsert.Parameters.AddWithValue("@Color", reader["Color"]);
+                                        try
+                                        {
+                                            cmdInsert.ExecuteNonQuery();
+                                            this.clearTable();
+                                            this.updateTable();
+                                        }
+                                        catch (SQLiteException ex)
+                                        {
+                                            MessageBox.Show(ex.Message.ToString());
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        conn.Close();
+                    }
+                    MessageBox.Show("คัดลอกสำเร็จ");
+                }
+            }
+            catch(SQLiteException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
     }
 }

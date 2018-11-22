@@ -54,3 +54,4 @@ C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManageme
 C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.csproj.CopyComplete
 C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.exe
 C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.pdb
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.ChooseCopyForm.resources
