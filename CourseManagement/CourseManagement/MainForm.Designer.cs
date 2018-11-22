@@ -68,7 +68,6 @@
             this.ClearDataBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.TimeTotal = new System.Windows.Forms.Label();
@@ -81,6 +80,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.ShowTable4 = new System.Windows.Forms.Label();
             this.ShowTable3 = new System.Windows.Forms.Label();
             this.ShowTable2 = new System.Windows.Forms.Label();
@@ -266,12 +266,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLabelModel.AutoSize = true;
             this.TableLabelModel.BackColor = System.Drawing.Color.Gray;
-            this.TableLabelModel.Font = new System.Drawing.Font("FC Lamoon", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLabelModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TableLabelModel.ForeColor = System.Drawing.Color.White;
             this.TableLabelModel.Location = new System.Drawing.Point(19, 184);
             this.TableLabelModel.Margin = new System.Windows.Forms.Padding(0);
             this.TableLabelModel.Name = "TableLabelModel";
-            this.TableLabelModel.Size = new System.Drawing.Size(127, 18);
+            this.TableLabelModel.Size = new System.Drawing.Size(179, 24);
             this.TableLabelModel.TabIndex = 20;
             this.TableLabelModel.Text = "102103 Calculus 2";
             this.TableLabelModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -624,7 +624,7 @@
             // dataGridView1
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("FC Lamoon", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -663,12 +663,12 @@
             this.LabelEmplyCourse.AutoSize = true;
             this.LabelEmplyCourse.BackColor = System.Drawing.Color.Transparent;
             this.LabelEmplyCourse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LabelEmplyCourse.Font = new System.Drawing.Font("FC Lamoon", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelEmplyCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelEmplyCourse.ForeColor = System.Drawing.Color.White;
             this.LabelEmplyCourse.Location = new System.Drawing.Point(0, 0);
             this.LabelEmplyCourse.Margin = new System.Windows.Forms.Padding(0);
             this.LabelEmplyCourse.Name = "LabelEmplyCourse";
-            this.LabelEmplyCourse.Size = new System.Drawing.Size(149, 26);
+            this.LabelEmplyCourse.Size = new System.Drawing.Size(195, 31);
             this.LabelEmplyCourse.TabIndex = 7;
             this.LabelEmplyCourse.Text = "ยังไม่เลือกรายวิชา";
             this.LabelEmplyCourse.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -737,14 +737,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1429, 298);
             this.panel2.TabIndex = 11;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(22, 166);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(88, 16);
-            this.richTextBox1.TabIndex = 19;
-            this.richTextBox1.Text = "";
             // 
             // label1
             // 
@@ -904,6 +896,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(167, 204);
             this.panel3.TabIndex = 0;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(22, 166);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(88, 16);
+            this.richTextBox1.TabIndex = 19;
+            this.richTextBox1.Text = "";
             // 
             // ShowTable4
             // 

@@ -59,7 +59,7 @@ namespace CourseManagement
         {
             foreach (DataGridViewColumn c in dataGridView1.Columns)
             {
-                c.DefaultCellStyle.Font = new Font("Cordia New", 16);
+                c.CellTemplate.Style.Font = new Font("Cordia New", 16);
             }
         }
 

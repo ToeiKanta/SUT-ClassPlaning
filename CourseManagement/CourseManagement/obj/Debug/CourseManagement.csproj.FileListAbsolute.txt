@@ -26,3 +26,31 @@ C:\Users\ToeiK\Documents\VB net projects\CourseManagement\CourseManagement\bin\D
 C:\Users\ToeiK\Documents\VB net projects\CourseManagement\CourseManagement\bin\Debug\System.Data.SQLite.xml
 C:\Users\ToeiK\Documents\VB net projects\CourseManagement\CourseManagement\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\ToeiK\Documents\VB net projects\CourseManagement\CourseManagement\obj\Debug\CourseManagement.ColorPicker.resources
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\Database.db
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\CourseManagement.exe.config
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\CourseManagement.exe
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\CourseManagement.pdb
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\Dapper.dll
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\EntityFramework.dll
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\System.Data.SQLite.dll
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\Dapper.xml
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\EntityFramework.xml
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\System.Data.SQLite.xml
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.csprojAssemblyReference.cache
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.AddNewCourse.resources
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.ColorPicker.resources
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.MainForm.resources
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.FindCourse.resources
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.Properties.Resources.resources
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.csproj.GenerateResource.cache
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.csproj.CoreCompileInputs.cache
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.csproj.CopyComplete
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.exe
+C:\Users\ToeiK\Documents\gitlab\coursemanagement\CourseManagement\CourseManagement\obj\Debug\CourseManagement.pdb
