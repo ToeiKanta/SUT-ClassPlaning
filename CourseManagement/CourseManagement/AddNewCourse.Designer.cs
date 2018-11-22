@@ -49,6 +49,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.topicName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -63,7 +64,7 @@
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(789, 600);
+            this.webBrowser1.Size = new System.Drawing.Size(789, 587);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
@@ -76,7 +77,7 @@
             this.panel1.Controls.Add(this.webBrowser1);
             this.panel1.Location = new System.Drawing.Point(453, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(818, 626);
+            this.panel1.Size = new System.Drawing.Size(818, 614);
             this.panel1.TabIndex = 1;
             // 
             // panel2
@@ -312,12 +313,26 @@
             this.topicName.TabIndex = 1;
             this.topicName.Text = "เพิ่มรายวิชา";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cordia New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(19, 626);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(952, 26);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "ปัจจุบันโปรแกรมยังไม่สามารถแสดงความละเอียดในระดับ นาที เช่น 15 หรือ 30 นาที ได้  " +
+    "ซึ่งตัวโปรแกรมจะปัดเศษนาทีลงเพื่อให้แสดงในตารางได้ ต้องขออภัยในความไม่สะดวกด้วยค" +
+    "รับ";
+            // 
             // AddNewCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(57)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(1283, 650);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.Control;
@@ -329,6 +344,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -354,5 +370,6 @@
         private System.Windows.Forms.Label SuccessLabel;
         private System.Windows.Forms.Button CancelEditBtn;
         private System.Windows.Forms.Button EditCourseBtn;
+        private System.Windows.Forms.Label label1;
     }
 }

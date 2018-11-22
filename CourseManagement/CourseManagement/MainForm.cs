@@ -258,7 +258,7 @@ namespace CourseManagement
 
                         foreach (Match item2 in reg2.Matches(str))
                         {
-                            if (item2.ToString() != "00")
+                            if (item2.ToString() != "00" && item2.ToString() != "30")
                             {
                                 if (firstTime == true)
                                 {
