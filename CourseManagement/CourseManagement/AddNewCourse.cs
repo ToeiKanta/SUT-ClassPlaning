@@ -126,12 +126,14 @@ namespace CourseManagement
 
         }
 
+        bool isDateChange = false;
         private void EditCourseBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 if (isCompleteForm())
                 {
+
                     var nameID = this.txtNameID.Text.ToString();
                     var name = this.txtName.Text.ToString();
                     var credit = this.selectCredit.SelectedItem;
@@ -139,6 +141,39 @@ namespace CourseManagement
                     Color color = Color.DarkGray;
 
                     string dataSource = "Database.db";
+
+                    //กรณีเวลาไม่เปลี่ยน
+                    if (this.isDateChange == false)
+                    {
+                        using (SQLiteConnection connection = new SQLiteConnection())
+                        {
+                            connection.ConnectionString = "Data Source=" + dataSource;
+                            connection.Open();
+
+                            using (SQLiteCommand cmd = new SQLiteCommand(connection))
+                            {
+                                cmd.CommandText =
+                                    "UPDATE Course SET NameID = :nameID, name = :name, Credit = :credit, Date = :date where ID=:id";
+                                cmd.Parameters.Add("nameID", DbType.String).Value = txtNameID.Text;
+                                cmd.Parameters.Add("name", DbType.String).Value = txtName.Text;
+                                cmd.Parameters.Add("credit", DbType.Int16).Value = selectCredit.SelectedIndex + 1;
+                                cmd.Parameters.Add("date", DbType.String).Value = txtTime.Text;
+                                cmd.Parameters.Add("id", DbType.Int64).Value = this.editID;
+                                cmd.ExecuteNonQuery();
+                            }
+                            connection.Close();
+
+                        }
+                        DialogResult dialogResult = MessageBox.Show("ยืนยันการแก้ไข", "ดำเนินการต่อหรือไม่", MessageBoxButtons.OKCancel);
+                        if (dialogResult == DialogResult.OK)
+                        {
+                            this.Close();
+                            mainForm.clearTable();
+                            mainForm.updateTable();
+                        }
+                    }
+                    else
+                    //กรณีเวลาเปลี่ยน
                     if (mainForm.CheckCanUpdateTable(nameID, name, date, color))
                     {
                         using (SQLiteConnection connection = new SQLiteConnection())
@@ -174,7 +209,7 @@ namespace CourseManagement
                     }
                     else
                     {
-                        MessageBox.Show("เกิดข้่อผิดพลาด กรุณาตรวจสอบฟอร์มอีกครั้ง");
+                        MessageBox.Show("เกิดข้่อผิดพลาด กรุณาตรวจสอบฟอร์มอีกครั้ง หรือทำการลบวิชาแล้วทำการเพิ่มรายวิชาใหม่อีกครั้ง");
                     }
                 }
             }
@@ -280,6 +315,10 @@ namespace CourseManagement
             this.selectCredit.SelectedIndex = -1;
             this.txtTime.Text = "";
         }
-        
+
+        private void txtTime_TextChanged(object sender, EventArgs e)
+        {
+            this.isDateChange = true;
+        }
     }
 }

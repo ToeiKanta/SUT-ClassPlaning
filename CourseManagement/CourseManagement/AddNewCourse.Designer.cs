@@ -32,6 +32,7 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtNameID = new System.Windows.Forms.TextBox();
             this.CancelEditBtn = new System.Windows.Forms.Button();
             this.EditCourseBtn = new System.Windows.Forms.Button();
             this.SuccessLabel = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.FindCourseBtn = new System.Windows.Forms.Button();
             this.selectCredit = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtNameID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTime = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -101,6 +101,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(411, 615);
             this.panel2.TabIndex = 2;
+            // 
+            // txtNameID
+            // 
+            this.txtNameID.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameID.ForeColor = System.Drawing.Color.Gray;
+            this.txtNameID.Location = new System.Drawing.Point(20, 110);
+            this.txtNameID.Name = "txtNameID";
+            this.txtNameID.Size = new System.Drawing.Size(372, 41);
+            this.txtNameID.TabIndex = 12;
+            this.txtNameID.Text = "121234";
+            this.txtNameID.Enter += new System.EventHandler(this.TxtPlaceHoler_Enter);
+            this.txtNameID.Leave += new System.EventHandler(this.TxtPlaceHoler_Leave);
             // 
             // CancelEditBtn
             // 
@@ -196,18 +208,6 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "รหัสวิชา";
             // 
-            // txtNameID
-            // 
-            this.txtNameID.Font = new System.Drawing.Font("Cordia New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameID.ForeColor = System.Drawing.Color.Gray;
-            this.txtNameID.Location = new System.Drawing.Point(20, 110);
-            this.txtNameID.Name = "txtNameID";
-            this.txtNameID.Size = new System.Drawing.Size(372, 41);
-            this.txtNameID.TabIndex = 12;
-            this.txtNameID.Text = "121234";
-            this.txtNameID.Enter += new System.EventHandler(this.TxtPlaceHoler_Enter);
-            this.txtNameID.Leave += new System.EventHandler(this.TxtPlaceHoler_Leave);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -227,6 +227,7 @@
             this.txtTime.Size = new System.Drawing.Size(370, 115);
             this.txtTime.TabIndex = 10;
             this.txtTime.Text = "Mo10:00-12:00 B1111\nWe10:00-12:00 B1111\nFr08:00-10:00 B1111";
+            this.txtTime.TextChanged += new System.EventHandler(this.txtTime_TextChanged);
             this.txtTime.Enter += new System.EventHandler(this.txtTime_Enter);
             this.txtTime.Leave += new System.EventHandler(this.txtTime_Leave);
             // 
