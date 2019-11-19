@@ -1,6 +1,6 @@
 # โปรแกรมจัดตารางเรียน มทส.
 **โปรแกรม สามารถใช้ได้กับระบบปฏิบัติการ window เท่านั้น ใช้ได้ทั้ง 64 bit และ 32 bit**
-
+**การใช้งานโปรแกรม คล้ายเว็ป https://ronsc.spm.in.th/**
 *Development by Visual Studio with C#*
 
 ## หน้าแรก![enter image description here](https://lh3.googleusercontent.com/vDa4iC2f7dH-i-BiTunuiEjKAYJ-Az24zYnOlBkHlmZNiyCRNAz5VwnPY1VYiguh93CM_OxiuZhgCA6qg4JKmqIgn6MsrQ-OmZj-tvYhXKTZdeKYErGgq-89Fwhy_o3W9wjRYJql5iFaiIAo51ZIMGtR9jDBA6wlzAwm2CJIQ20PU7JP76pw-gJfjgm3dws0AFdJqL8UA_UImcvtftb15ps2ukk8NDskdCuoRayKER28iya2daK1bd7DV2QBqhzAKkxuYtAWAHn7NQpOb3uccHYjgMP0lzdkJ32OFLigZPxvk85R_uxEcMIf1Nh8G8_pKLZC_96bm9G1wtZaihpjrYA9HPdlaqF0L0P38oGMXfeZXJ2HaDbPEaVPG3wFu_bSGkhJ417YHxqnkrIVYC-KfcAyMRY9_R9FLh6OFZpgo9aoM7aNyHJJx09xcpLLuemrZzF0H-bHiELJxgU_iqR36dzuNnyxrZ_0bkDYHajNvbgvp0FqDCG-8Fvbf-tgCBFKaFtiBdNgJMMOIXWyNhgjRf9tGiMLrQXt4ExzSiFKxxtLcPwdo81iI8y19ZvkB93vgy1kQYJlkAptl8WCRAKVa8Y55JP_XafK445A1nDPA320Ez5KhBbjkgLEjh5VSbbY0eQdi5KB79tqvfAEA23WQJCAOii-Z_x5Qa9CBbZ6azJxOENJY6zTfAgD=w2880-h1326-no)
