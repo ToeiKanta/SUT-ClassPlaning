@@ -6,6 +6,6 @@
 *Development by Visual Studio with C#*
 
 ## หน้าแรก
-[Imgur](https://i.imgur.com/Eow2cqJ.png)
+![Imgur](https://i.imgur.com/Eow2cqJ.png)
 ## หน้าเพิ่มตารางเรียน
-(https://i.imgur.com/f2jaNDd.png)
+![Imgur](https://i.imgur.com/f2jaNDd.png)
