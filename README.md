@@ -5,6 +5,8 @@
 
 *Development by Visual Studio with C#*
 
+จัดทำโดย นายกันตพงศ์ พูนเษม [ติดต่อ](https://www.facebook.com/Kantapong41)
+
 ## หน้าแรก
 ![Imgur](https://i.imgur.com/Eow2cqJ.png)
 ## หน้าเพิ่มตารางเรียน
